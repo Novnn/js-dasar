@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+   // Class abstrak Kendaraan
+class Kendaraan {
+    bergerak() {}
+    berhenti() {}
+}
+// Class turunan Mobil
+class Mobil extends Kendaraan {
+    bergerak() {
+        console.log("Mobil bergerak di jalan.");
+    }
+    berhenti() {
+        console.log("Mobil berhenti.");
+    }
+}
+// Class turunan SepedaMotor
+class SepedaMotor extends Kendaraan {
+    bergerak() {
+        console.log("Sepeda motor bergerak di jalan.");
+    }
+    berhenti() {
+        console.log("Sepeda motor berhenti.");
+    }
+}
+class Pesawat extends Kendaraan {
+    bergerak() {
+        console.log("Pesawat bergerak di jalan.");
+    }
+    berhenti() {
+        console.log("Pesawat berhenti.");
+    }
+}
+const mobil = new Mobil();
+mobil.bergerak();  // Output: Mobil bergerak di jalan.
+mobil.berhenti();  // Output: Mobil berhenti.
+const sepedaMotor = new SepedaMotor();
+sepedaMotor.bergerak();  // Output: Sepeda motor bergerak di jalan.
+sepedaMotor.berhenti();  // Output: Sepeda motor berhenti.
+const pesawat = new Pesawat();
+pesawat.bergerak();  // Output: Mobil bergerak di jalan.
+pesawat.berhenti();  // Output: Mobil berhenti.
+</script>
+</body>
+</html>

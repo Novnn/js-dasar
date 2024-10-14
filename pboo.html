@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="pboo.js"></script> 
+</head>
+<body>
+    <h2 class="h2"></h2>
+<script>
+    class Mobil {
+    constructor(merk,kecepatan=0) {
+    this.merk=merk;
+    this.kecepatan=kecepatan; }
+
+    berakselerasi() {
+        this.kecepatan+=10;
+    }
+    tampilkankecepatan() {
+        console.log(`kecepatan mobil ${this.merk}: ${this.kecepatan}km/jam`);
+    }
+
+}
+
+const mobil1 = new Mobil ("xenia");
+
+mobil1.tampilkankecepatan();
+mobil1.berakselerasi();
+mobil1.tampilkankecepatan();
+mobil1.berakselerasi();
+mobil1.tampilkankecepatan();
+mobil1.berakselerasi();
+mobil1.tampilkankecepatan();
+
+document.querySelector('.h2').innerHTML = mobil1.merk;
+document.querySelector('.h2').innerHTML = mobil1.kecepatan;
+</script>
+</body>
+</html>

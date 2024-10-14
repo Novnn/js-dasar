@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    // Parent class Animal
+class Animal {
+  speak() {
+      console.log("Animal makes a sound");
+  }
+}
+
+// Subclass Dog yang mengoverride metode speak()
+class Dino extends Animal {
+  speak() {
+      console.log("Rawr!");
+  }
+}
+
+// Subclass Cat yang mengoverride metode speak()
+class Cat extends Animal {
+  speak() {
+      console.log("Meow!");
+  }
+}
+
+// Fungsi yang menerima objek dari class Animal atau subclass-nya
+function makeAnimalSpeak(animal) {
+  animal.speak();
+}
+
+// Membuat objek dari class Dino dan Cat
+const dino = new Dino();
+const cat = new Cat();
+
+// Memanggil fungsi makeAnimalSpeak untuk setiap objek
+makeAnimalSpeak(dino);  // Output: Woof!
+makeAnimalSpeak(cat);  // Output: Meow!
+</script>
+</body>
+</html>
